@@ -1,0 +1,28 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    }
+
+*   { /* Define estilos para todos os elementos, removendo margem e padding padrão e usando uma fonte básica. */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    
