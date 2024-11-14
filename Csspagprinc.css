@@ -25,4 +25,50 @@
         font-family: Arial, sans-serif;
     }
 
-    
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura do body para 100% da altura da tela */
+    margin: 0;
+    background-color: #000000; /* Define a cor de fundo da página */
+    color: white;
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+.subtexto {
+    font-size: 18px; /* Tamanho menor para o subtítulo */
+    color: #fff; /* Cor branca para o texto */
+    margin-top: 10px; /* Espaçamento entre o título e o subtítulo */
+}
+.mascara {
+    font-size: 100px;
+    font-weight: bold;
+    background-image: url('tela dee fundo da logo.jpg');
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+.botao {
+    display: inline-block;
+    margin-top: 20px; /* Espaçamento entre o subtítulo e o botão */
+    padding: 10px 20px;
+    background-color: #33a18a; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Animação suave */
+}
+
+.botao:hover {
+    background-color: #333; /* Cor ao passar o mouse */
+}
