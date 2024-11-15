@@ -47,7 +47,7 @@
     margin-top: 10px; /* Espaçamento entre o título e o subtítulo */
 }
 .mascara {
-    font-size: 100px;
+    font-size: 150px;
     font-weight: bold;
     background-image: url('tela dee fundo da logo.jpg');
     background-size: cover;
@@ -71,4 +71,41 @@
 
 .botao:hover {
     background-color: #333; /* Cor ao passar o mouse */
+}
+button {
+    z-index: 1; /* Coloca o botão acima de outros elementos */
+    position: relative; /* Permite que ::before use position absolute */
+    font-size: inherit; /* Inherit de fonte */
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    overflow: hidden; /* Oculta a animação de overflow */
+    transition: color 0.4s ease-in-out; /* Suaviza a cor */
+}
+
+button::before {
+    content: '';
+    z-index: -1; /* Coloca a animação abaixo do botão */
+    position: absolute; /* Permite o posicionamento relativo ao botão */
+    top: 100%;
+    right: 100%;
+    width: 5em; /* Aumenta para cobrir o texto */
+    height: 5em;
+    border-radius: 50%; /* Mantém o efeito circular */
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0); /* Define o ponto inicial */
+    transition: transform 0.75s ease-in-out; /* Suaviza a animação */
+}
+
+button:hover {
+    cursor: pointer;
+    color: #161616; /* Altera a cor do texto no hover */
+}
+
+button:hover::before {
+    transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15); /* Expande para cobrir o botão */
 }
