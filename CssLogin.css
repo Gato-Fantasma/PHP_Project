@@ -1,0 +1,78 @@
+.login {
+    border: 1px solid black; /* Define uma borda preta ao redor do contêiner */
+    width: 50%; /* Define a largura */
+    height: 70vh; /* Define a altura */
+    background: url('loginwallpaper.gif'); /* Aplica uma imagem de fundo */
+    color: white; /* Define a cor do texto como branca */
+    border-radius: 20px; /* Arredonda os cantos do contêiner */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75); /* Adiciona uma sombra ao contêiner */
+    background-size: cover; /* Faz a imagem cobrir toda a área do fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    overflow: hidden; /* Garante que o conteúdo dentro do contêiner não ultrapasse os limites */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: absolute; /* Permite posicionamento absoluto */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o contêiner para o centro */
+}
+
+    
+form {
+    display: block; /* Define o `form` como um elemento de bloco */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo de largura e altura */
+    padding: 40px; /* Adiciona espaçamento interno de 40px */
+    width: 100%; /* Faz o formulário ocupar 100% da largura do contêiner pai */
+    height: 100%; /* Faz o formulário ocupar 100% da altura do contêiner pai */
+    backdrop-filter: brightness(40%); /* Escurece o fundo do formulário */
+    flex-direction: column; /* Define que os itens filhos serão dispostos em coluna */
+    display: flex; /* Torna o formulário um contêiner flex */
+    gap: 5px; /* Adiciona um espaçamento de 5px entre os itens */
+}
+
+h1 {
+    font-weight: normal; /* Define o peso da fonte como normal */
+    font-size: 24px; /* Define o tamanho da fonte */
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao texto */
+    margin-bottom: 60px; /* Adiciona espaçamento inferior */
+}
+
+
+label {
+    color: rgba(255, 255, 255, 0.8); /* Define a cor do texto com opacidade */
+    text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+    font-size: 10px; /* Define o tamanho da fonte */
+    letter-spacing: 2px; /* Define o espaçamento entre as letras */
+    padding-left: 10px; /* Adiciona um espaçamento à esquerda */
+}
+
+
+input {
+    background: rgba(255, 255, 255, 0.3); /* Define um fundo semitransparente */
+    height: 40px; /* Define a altura */
+    line-height: 40px; /* Centraliza o texto verticalmente */
+    border-radius: 20px; /* Arredonda as bordas */
+    padding: 0px 20px; /* Adiciona espaçamento interno nas laterais */
+    border: none; /* Remove as bordas padrão */
+    margin-bottom: 20px; /* Adiciona margem inferior */
+    color: white; /* Define a cor do texto como branca */
+}
+
+
+button {
+    background: rgb(45, 126, 231); /* Define a cor de fundo */
+    height: 40px; /* Define a altura */
+    line-height: 40px; /* Centraliza o texto verticalmente */
+    border-radius: 40px; /* Arredonda as bordas */
+    border: none; /* Remove a borda padrão */
+    margin: 10px 0px; /* Adiciona margens superior e inferior */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao botão */
+    color: white; /* Define a cor do texto como branca */
+}
+
+body {
+    background: url('loginwallpaper.gif') no-repeat center center; /* Aplica uma imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área da página */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
+    height: 100vh; /* Define que o body ocupe toda a altura da janela */
+}
