@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="csstest.css">
+   
     <title>Luiz Eduardo</title>
 </head>
 <body>
@@ -37,7 +38,37 @@
                 
                 <!-- Segunda seção: Botão -->
                 <section>
-                    <button class="add-btn">Adicionar Meta</button>
+                    <!-- Botão para adicionar nova meta -->
+                    <button id="add-btn">Adicionar Meta</button>
+                    <!-- Modal para adicionar meta -->
+                    <div id="modal" class="modal hidden">
+                        <div class="modal_content">
+                            <h2>Nova Meta</h2>
+                            <label for="meta">Meta:</label>
+                            <input type="text" id="meta" placeholder="Digite a meta">
+                            <label for="detalhes-meta">Detalhes:</label>
+                            <textarea id="detalhes-meta" placeholder="Detalhes sobre a meta"></textarea>
+                            <button>Salvar</button>
+                            <!-- Botão para fechar o modal de adicionar meta -->
+                            <button id="close-modal">Fechar</button>
+                        </div>
+                    </div>
+                
+                    <!-- Botão para adicionar novo hábito -->
+                    <button id="add-hbt-btn">Adicionar Hábito</button>
+                    <!-- Modal para adicionar hábito -->
+                    <div id="modal-habito" class="modal hidden">
+                        <div class="modal_content">
+                            <h2>Novo Hábito</h2>
+                            <label for="habito">Hábito:</label>
+                            <input type="text" id="habito" placeholder="Digite o nome do hábito">
+                            <label for="detalhes-habito">Detalhes:</label>
+                            <textarea id="detalhes-habito" placeholder="Detalhes sobre o hábito"></textarea>
+                            <button>Salvar</button>
+                            <!-- Botão para fechar o modal de adicionar hábito -->
+                            <button id="close-modal-hbt">Fechar</button>
+                        </div>
+                    </div>
                 </section>
             </main>
             <!-- Seção lateral direita -->
@@ -45,5 +76,6 @@
                 <h3>Metas</h3> <!-- Área reservada para metas -->
             </aside>
         </div>
+    <script src="RotiRotinas.js"></script>
 </body>
 </html>
