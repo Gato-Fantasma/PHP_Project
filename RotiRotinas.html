@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreamento de Hábitos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bem-vindo, Nome do Usuário</h1>
+      <button class="config-btn">⚙️ Configurações</button>
+    </header>
+    
+    <aside class="sidebar">
+      <h2>Meus Hábitos</h2>
+      <ul>
+        <li><input type="checkbox"> Hábito 1</li>
+        <li><input type="checkbox"> Hábito 2</li>
+        <li><input type="checkbox"> Hábito 3</li>
+      </ul>
+      <button class="add-btn" onclick="openModal('modal-habito')">Adicionar Hábito</button>
+      
+      <h3>Sequência</h3>
+      <p>🔥 0 dias</p>
+      
+      <h3>Metas</h3>
+      <button class="add-btn" onclick="openModal('modal-meta')">Adicionar Meta</button>
+    </aside>
+
+    <main class="main-content">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </main>
+  </div>
+
+  <!-- Modal para Adicionar Hábito -->
+  <div id="modal-habito" class="modal">
+    <div class="modal-content">
+      <h2>Novo Hábito</h2>
+      <label for="habito">Hábito:</label>
+      <input type="text" id="habito" placeholder="Digite o nome do hábito">
+      <label for="detalhes-habito">Detalhes:</label>
+      <textarea id="detalhes-habito" placeholder="Detalhes sobre o hábito"></textarea>
+      <button>Salvar</button>
+      <button onclick="closeModal('modal-habito')">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Modal para Adicionar Meta -->
+  <div id="modal-meta" class="modal">
+    <div class="modal-content">
+      <h2>Nova Meta</h2>
+      <label for="meta">Meta:</label>
+      <input type="text" id="meta" placeholder="Digite a meta">
+      <label for="detalhes-meta">Detalhes:</label>
+      <textarea id="detalhes-meta" placeholder="Detalhes sobre a meta"></textarea>
+      <button>Salvar</button>
+      <button onclick="closeModal('modal-meta')">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

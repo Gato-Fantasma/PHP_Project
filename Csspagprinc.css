@@ -1,0 +1,112 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    }
+
+*   { /* Define estilos para todos os elementos, removendo margem e padding padrão e usando uma fonte básica. */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura do body para 100% da altura da tela */
+    margin: 0;
+    background-color: #000000; /* Define a cor de fundo da página */
+    color: white;
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+.subtexto {
+    font-size: 18px; /* Tamanho menor para o subtítulo */
+    color: #fff; /* Cor branca para o texto */
+    margin-top: 10px; /* Espaçamento entre o título e o subtítulo */
+}
+.mascara {
+    font-size: 150px;
+    font-weight: bold;
+    background-image: url('tela de fundo do siteprincipal.gif');
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+.botao {
+    display: inline-block;
+    margin-top: 20px; /* Espaçamento entre o subtítulo e o botão */
+    padding: 10px 20px;
+    background-color: #33a18a; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Animação suave */
+}
+
+.botao:hover {
+    background-color: #333; /* Cor ao passar o mouse */
+}
+button {
+    z-index: 1; /* Coloca o botão acima de outros elementos */
+    position: relative; /* Permite que ::before use position absolute */
+    font-size: inherit; /* Inherit de fonte */
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    overflow: hidden; /* Oculta a animação de overflow */
+    transition: color 0.4s ease-in-out; /* Suaviza a cor */
+}
+
+button::before {
+    content: '';
+    z-index: -1; /* Coloca a animação abaixo do botão */
+    position: absolute; /* Permite o posicionamento relativo ao botão */
+    top: 100%;
+    right: 100%;
+    width: 5em; /* Aumenta para cobrir o texto */
+    height: 5em;
+    border-radius: 50%; /* Mantém o efeito circular */
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0); /* Define o ponto inicial */
+    transition: transform 0.75s ease-in-out; /* Suaviza a animação */
+}
+
+button:hover {
+    cursor: pointer;
+    color: #161616; /* Altera a cor do texto no hover */
+}
+
+button:hover::before {
+    transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15); /* Expande para cobrir o botão */
+}
+
