@@ -3,82 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Rotinascss.css">
-   
-    <title>Site de Rotinas</title>
+    <title>Luiz Eduardo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <body>
-        <!-- Container principal para organizar o layout -->
-        <div class="container">
-            <!-- Cabeçalho -->
-            <header class="header">
-                <h1>Bem-vindo, Nome do Usuário</h1>
-            </header>
-    
+    <div class="container mt-4">
+        <!-- Cabeçalho -->
+        <header class="d-flex justify-content-between align-items-center p-3 bg-secondary text-white rounded">
+            <h1>Bem-vindo, Nome do Usuário</h1>
+            <button class="btn btn-light">⚙️ Configurações</button>
+        </header>
+
+        <div class="row mt-4">
             <!-- Seção lateral esquerda -->
-            <aside class="aside">
+            <aside class="col-md-3 bg-light p-3 rounded">
                 <h2>Meus Hábitos</h2>
-                <ul>
-                    <!-- Lista de hábitos com checkboxes -->
-                    <li><input type="checkbox"> Hábito 1</li>
-                    <li><input type="checkbox"> Hábito 2</li>
-                    <li><input type="checkbox"> Hábito 3</li>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox" class="me-2">Hábito 1</li>
+                    <li><input type="checkbox" class="me-2">Hábito 2</li>
+                    <li><input type="checkbox" class="me-2">Hábito 3</li>
                 </ul>
             </aside>
-    
+
             <!-- Área principal -->
-            <main class="main">
-                <!-- Primeira seção: Sequência -->
-                <section>
+            <main class="col-md-6">
+                <section class="mb-4">
                     <h3>Sequência</h3>
                     <p>🔥 0 dias</p>
                 </section>
-                
-                <!-- Segunda seção: Botão -->
+
                 <section>
-                    <!-- Botão para adicionar nova meta -->
-                    <button id="add-btn">Adicionar Meta</button>
-                    <!-- Modal para adicionar meta -->
-                    <div id="modal" class="modal hidden">
-                        <div class="modal_content">
-                            <h2>Nova Meta</h2>
-                            <label for="meta">Meta:</label>
-                            <input type="text" id="meta" placeholder="Digite a meta">
-                            <label for="detalhes-meta">Detalhes:</label>
-                            <textarea id="detalhes-meta" placeholder="Detalhes sobre a meta"></textarea>
-                            <button>Salvar</button>
-                            <!-- Botão para fechar o modal de adicionar meta -->
-                            <button id="close-modal">Fechar</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Mensagem exibida na página -->
-                    <div id="mensagem" class="mensagem"></div>
-                    <button id="adicionar-frase">Adicionar Frase</button>
-                
-                    <!-- Botão para adicionar novo hábito -->
-                    <button id="add-hbt-btn">Adicionar Hábito</button>
-                    <!-- Modal para adicionar hábito -->
-                    <div id="modal-habito" class="modal hidden">
-                        <div class="modal_content">
-                            <h2>Novo Hábito</h2>
-                            <label for="habito">Hábito:</label>
-                            <input type="text" id="habito" placeholder="Digite o nome do hábito">
-                            <label for="detalhes-habito">Detalhes:</label>
-                            <textarea id="detalhes-habito" placeholder="Detalhes sobre o hábito"></textarea>
-                            <button>Salvar</button>
-                            <!-- Botão para fechar o modal de adicionar hábito -->
-                            <button id="close-modal-hbt">Fechar</button>
-                        </div>
-                    </div>
+                    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalMeta">Adicionar Meta</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito">Adicionar Hábito</button>
                 </section>
             </main>
+
             <!-- Seção lateral direita -->
-            <aside class="aside2">
-                <h3>Metas</h3> <!-- Área reservada para metas -->
+            <aside class="col-md-3 bg-light p-3 rounded">
+                <h3>Metas</h3>
             </aside>
         </div>
-    <script src="RotiRotinas.js"></script>
+    </div>
+
+    <!-- Modal de Meta -->
+    <div class="modal fade" id="modalMeta" tabindex="-1" aria-labelledby="metaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="metaLabel">Nova Meta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="meta" class="form-label">Meta:</label>
+                    <input type="text" class="form-control mb-3" id="meta" placeholder="Digite a meta">
+                    <label for="detalhes-meta" class="form-label">Detalhes:</label>
+                    <textarea class="form-control" id="detalhes-meta" placeholder="Detalhes sobre a meta"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Hábito -->
+    <div class="modal fade" id="modalHabito" tabindex="-1" aria-labelledby="habitoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="habitoLabel">Novo Hábito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="habito" class="form-label">Hábito:</label>
+                    <input type="text" class="form-control mb-3" id="habito" placeholder="Digite o nome do hábito">
+                    <label for="detalhes-habito" class="form-label">Detalhes:</label>
+                    <textarea class="form-control" id="detalhes-habito" placeholder="Detalhes sobre o hábito"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
