@@ -1,183 +1,125 @@
-        /* Reset de margens e bordas para consistência no layout */
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box; /* Inclui padding e borda no tamanho total dos elementos */
-        }
+/* ===================== */
+/* Reset Geral do Layout */
+/* ===================== */
 
-        /* Configurações gerais para o corpo da página */
-        body {
-            background: #1c1c1c; /* Cor de fundo escura */
-            color: #fdfdfd; /* Cor do texto clara */
-            font-family: Arial, sans-serif; /* Define a fonte padrão */
-            display: flex; /* Usa Flexbox para centralizar o conteúdo */
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Centraliza verticalmente */
-            height: 100vh; /* Altura total da tela */
-        }
+/* Reset de margens e bordas para consistência no layout */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total dos elementos */
+}
 
-        /* Container principal para organizar as seções */
-        .container {
-            display: grid; /* Usa grid layout para organizar as áreas */
-            grid-template-areas: 
-                "header header header"
-                "aside main aside2"; /* Define as áreas principais */
-            grid-template-columns: 20% 60% 20%; /* Largura das colunas */
-            gap: 1rem; /* Espaçamento entre os elementos */
-            width: 90%; /* Largura do container */
-            max-width: 1200px; /* Limite máximo de largura */
-            background: #333; /* Fundo do container */
-            padding: 1rem; /* Espaçamento interno */
-            border-radius: 8px; /* Bordas arredondadas */
-        }
+/* ================= */
+/* Configurações Globais */
+/* ================= */
 
-        /* Estilo do cabeçalho */
-        .header {
-            grid-area: header; /* Define o cabeçalho como a área "header" */
-            text-align: center; /* Centraliza o texto */
-            padding: 0.5rem; /* Espaçamento interno */
-            background: #afaeae; /* Cor de fundo do cabeçalho */
-            border-radius: 5px; /* Bordas arredondadas */
-        }
+/* Configurações gerais para o corpo da página */
+body {
+    background: #1c1c1c; /* Cor de fundo escura */
+    color: #fdfdfd; /* Cor do texto clara */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    display: flex; /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
 
-        /* Estilo para as seções laterais */
-        .aside, .aside2 {
-            padding: 0.5rem; /* Espaçamento interno */
-            background: #afaeae; /* Fundo das laterais */
-            border-radius: 5px; /* Bordas arredondadas */
-        }
+/* ======================= */
+/* Container Principal */
+/* ======================= */
 
-        .aside {
-            grid-area: aside; /* Define como a área "aside" */
-        }
+.container {
+    display: grid; /* Usa grid layout para organizar as áreas */
+    grid-template-areas: 
+        "header header header"
+        "aside main aside2"; /* Define as áreas principais */
+    grid-template-columns: 20% 60% 20%; /* Largura das colunas */
+    gap: 1rem; /* Espaçamento entre os elementos */
+    width: 90%; /* Largura do container */
+    max-width: 1200px; /* Limite máximo de largura */
+    background: #333; /* Fundo do container */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+}
 
-        .aside2 {
-            grid-area: aside2; /* Define como a área "aside2" */
-        }
+/* ================= */
+/* Cabeçalho (Header) */
+/* ================= */
 
-        /* Estilo para a área principal */
-        .main {
-            grid-area: main; /* Define como a área "main" */
-            display: flex; /* Usa Flexbox para alinhar o conteúdo */
-            flex-direction: column; /* Alinha os elementos na vertical */
-            justify-content: space-between; /* Espaça os elementos uniformemente */
-            background: #afaeae; /* Fundo da área principal */
-            border-radius: 5px; /* Bordas arredondadas */
-            padding: 1rem; /* Espaçamento interno */
-        }
+.header {
+    grid-area: header; /* Define o cabeçalho como a área "header" */
+    text-align: center; /* Centraliza o texto */
+    padding: 0.5rem; /* Espaçamento interno */
+    background: #afaeae; /* Cor de fundo do cabeçalho */
+    border-radius: 5px; /* Bordas arredondadas */
+}
 
-        /* Estilo para o botão de adicionar metas */
-        .add-btn {
-            margin-top: 1rem; /* Espaçamento acima do botão */
-            padding: 0.5rem; /* Espaçamento interno do botão */
-            background: #555; /* Fundo do botão */
-            border: none; /* Remove bordas padrão */
-            color: #fff; /* Cor do texto do botão */
-            cursor: pointer; /* Define o cursor como "mãozinha" */
-            border-radius: 3px; /* Bordas arredondadas */
-        }
+/* ===================== */
+/* Seções Laterais (Aside) */
+/* ===================== */
 
-        .add-btn:hover {
-            background: #777; /* Cor ao passar o mouse no botão */
-        }
-    
-        .main section {
-            margin-bottom: 20px; /* Adiciona espaçamento vertical entre as seções */
-        }
-        .main section:nth-child(1) {
-            margin-bottom: 20px; /* Espaçamento entre a primeira e a segunda seção */
-        }
-        /* Reset de margens e bordas para consistência no layout */
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box; /* Inclui padding e borda no tamanho total dos elementos */
-        }
+.aside, .aside2 {
+    padding: 0.5rem; /* Espaçamento interno */
+    background: #afaeae; /* Fundo das laterais */
+    border-radius: 5px; /* Bordas arredondadas */
+}
 
-        /* Configurações gerais para o corpo da página */
-        body {
-            background: #1c1c1c; /* Cor de fundo escura */
-            color: #fdfdfd; /* Cor do texto clara */
-            font-family: Arial, sans-serif; /* Define a fonte padrão */
-            display: flex; /* Usa Flexbox para centralizar o conteúdo */
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Centraliza verticalmente */
-            height: 100vh; /* Altura total da tela */
-        }
+.aside {
+    grid-area: aside; /* Define como a área "aside" */
+}
 
-        /* Container principal para organizar as seções */
-        .container {
-            display: grid; /* Usa grid layout para organizar as áreas */
-            grid-template-areas: 
-                "header header header"
-                "aside main aside2"; /* Define as áreas principais */
-            grid-template-columns: 20% 60% 20%; /* Largura das colunas */
-            gap: 1rem; /* Espaçamento entre os elementos */
-            width: 90%; /* Largura do container */
-            max-width: 1200px; /* Limite máximo de largura */
-            background: #333; /* Fundo do container */
-            padding: 1rem; /* Espaçamento interno */
-            border-radius: 8px; /* Bordas arredondadas */
-        }
+.aside2 {
+    grid-area: aside2; /* Define como a área "aside2" */
+}
 
-        /* Estilo do cabeçalho */
-        .header {
-            grid-area: header; /* Define o cabeçalho como a área "header" */
-            text-align: center; /* Centraliza o texto */
-            padding: 0.5rem; /* Espaçamento interno */
-            background: #afaeae; /* Cor de fundo do cabeçalho */
-            border-radius: 5px; /* Bordas arredondadas */
-        }
+/* ================== */
+/* Área Principal (Main) */
+/* ================== */
 
-        /* Estilo para as seções laterais */
-        .aside, .aside2 {
-            padding: 0.5rem; /* Espaçamento interno */
-            background: #afaeae; /* Fundo das laterais */
-            border-radius: 5px; /* Bordas arredondadas */
-        }
+.main {
+    grid-area: main; /* Define como a área "main" */
+    display: flex; /* Usa Flexbox para alinhar o conteúdo */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    justify-content: space-between; /* Espaça os elementos uniformemente */
+    background: #afaeae; /* Fundo da área principal */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
+}
 
-        .aside {
-            grid-area: aside; /* Define como a área "aside" */
-        }
+.main section {
+    margin-bottom: 20px; /* Adiciona espaçamento vertical entre as seções */
+}
 
-        .aside2 {
-            grid-area: aside2; /* Define como a área "aside2" */
-        }
+/* ====================== */
+/* Botões de Ação (Add) */
+/* ====================== */
 
-        /* Estilo para a área principal */
-        .main {
-            grid-area: main; /* Define como a área "main" */
-            display: flex; /* Usa Flexbox para alinhar o conteúdo */
-            flex-direction: column; /* Alinha os elementos na vertical */
-            justify-content: space-between; /* Espaça os elementos uniformemente */
-            background: #afaeae; /* Fundo da área principal */
-            border-radius: 5px; /* Bordas arredondadas */
-            padding: 1rem; /* Espaçamento interno */
-        }
+.add-btn {
+    margin-top: 1rem; /* Espaçamento acima do botão */
+    padding: 0.5rem; /* Espaçamento interno do botão */
+    background: #555; /* Fundo do botão */
+    border: none; /* Remove bordas padrão */
+    color: #fff; /* Cor do texto do botão */
+    cursor: pointer; /* Define o cursor como "mãozinha" */
+    border-radius: 3px; /* Bordas arredondadas */
+}
 
-        /* Estilo para o botão de adicionar metas */
-        .add-btn {
-            margin-top: 1rem; /* Espaçamento acima do botão */
-            padding: 0.5rem; /* Espaçamento interno do botão */
-            background: #555; /* Fundo do botão */
-            border: none; /* Remove bordas padrão */
-            color: #fff; /* Cor do texto do botão */
-            cursor: pointer; /* Define o cursor como "mãozinha" */
-            border-radius: 3px; /* Bordas arredondadas */
-        }
+.add-btn:hover {
+    background: #777; /* Cor ao passar o mouse no botão */
+}
 
-        .add-btn:hover {
-            background: #777; /* Cor ao passar o mouse no botão */
-        }
-    
-        .main section {
-            margin-bottom: 20px; /* Adiciona espaçamento vertical entre as seções */
-        }
-        .main section:nth-child(1) {
-            margin-bottom: 20px; /* Espaçamento entre a primeira e a segunda seção */
-        }
+/* Alinhamento central dos botões */
+.main section {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+}
 
-/* Estilo para o modal geral */
+/* =================== */
+/* Estilo para Modal */
+/* =================== */
+
 .modal {
     position: fixed; /* Modal é fixado na tela */
     top: 0;
@@ -203,3 +145,4 @@
     width: 300px; /* Largura do conteúdo */
     text-align: center; /* Centraliza o texto */
 }
+
