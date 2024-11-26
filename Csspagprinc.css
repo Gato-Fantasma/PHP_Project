@@ -31,7 +31,7 @@
     align-items: center;
     height: 100vh; /* Define a altura do body para 100% da altura da tela */
     margin: 0;
-    background-color: #000000; /* Define a cor de fundo da página */
+    background-color: #e9c318; /* Define a cor de fundo da página */
     color: white;
     font-family: Arial, sans-serif; /* Define a fonte do texto */
     text-align: center; /* Centraliza o conteúdo */
@@ -49,7 +49,7 @@
 .mascara {
     font-size: 150px;
     font-weight: bold;
-    background-image: url('tela de fundo do siteprincipal.gif');
+    background-image: url('TezB.gif');
     background-size: cover;
     background-clip: text;
     color: transparent;
@@ -110,3 +110,21 @@ button:hover::before {
     transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15); /* Expande para cobrir o botão */
 }
 
+.wave-section {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(to bottom, #cfaa02, #02b7c4);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Div do degradê */
+.gradient-transition {
+    height: 50px; /* Altura do degradê */
+    background: linear-gradient(to bottom, #e9c318, #d4b036); /* Degradê que suaviza as cores */
+}
