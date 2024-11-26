@@ -72,3 +72,11 @@ botaoAdicionar.addEventListener("click", () => {
     alert("Frase adicionada com sucesso!");
   }
 });
+
+// Recupera o nome do usuário do Local Storage
+const userName = localStorage.getItem("userName");
+const welcomeMessage = document.getElementById("welcome-message");
+// Atualiza o texto da mensagem de boas-vindas
+  if (userName) {
+      welcomeMessage.textContent = `Bem-vindo, ${userName}`;
+    }
