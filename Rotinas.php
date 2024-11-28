@@ -54,7 +54,7 @@
 
 <?php
 $host = 'localhost'; // Host do banco de dados
-$dbname = 'Habitos DB'; // Nome do banco de dados
+$dbname = 'HabitosDB'; // Nome do banco de dados
 $username = 'root'; // Seu usuário do MySQL
 $password = ''; // Sua senha do MySQL
 

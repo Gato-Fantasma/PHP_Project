@@ -1,4 +1,4 @@
-CREATE DATABASE Habitos DB;
+CREATE DATABASE HabitosDB;
 
 USE Habitos DB;
 
