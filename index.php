@@ -11,7 +11,7 @@
         <!-- Adicione itens de navegação aqui -->
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="ROTIlogo.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+                <img src="boneco roti.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
                 Roti
             </a>
         </div>
