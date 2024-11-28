@@ -9,18 +9,24 @@
 <body>
 
 <div class="login">
-    <form onsubmit="saveUserName(event)">
+    <form action="LoginRoti.php" method="POST"> <!-- O envio é feito ao LoginRoti.php -->
         <h1>LOGIN</h1>
         <label>Nome de Usuário</label>
-        <input type="text" id="username" required> <!-- Campo para capturar o nome -->
+        <input type="text" name="nome" id="username" required>
+        
         <label>Email</label>
-        <input type="email" required>
+        <input type="email" name="email" required>
+        
         <label>Senha</label>
-        <input type="password" required>
+        <input type="password" name="senha" required>
+        
         <label>Confirmar Senha</label>
         <input type="password" required>
-        <button type="submit">Finalizar</button> <!-- Botão para salvar e redirecionar -->
+        
+        <button type="submit">Finalizar</button>
     </form>
+    
+    
 </div>
 
 <script>
@@ -29,7 +35,7 @@
         event.preventDefault(); // Impede o comportamento padrão de envio do formulário
         const userName = document.getElementById("username").value; // Pega o valor do campo "Nome de Usuário"
         localStorage.setItem("userName", userName); // Salva o nome no Local Storage
-        window.location.href = "pagina_principal.html"; // Redireciona para a página principal
+        window.location.href = "Rotinas.html"; // Redireciona para a página principal
     }
 </script>
 
