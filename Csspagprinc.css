@@ -31,13 +31,14 @@
     align-items: center;
     height: 100vh; /* Define a altura do body para 100% da altura da tela */
     margin: 0;
-    background-color: #e9c318; /* Define a cor de fundo da página */
+    /* background-color: #8d7b2c; /* Define a cor de fundo da página */
     color: white;
     font-family: Arial, sans-serif; /* Define a fonte do texto */
     text-align: center; /* Centraliza o conteúdo */
     justify-content: center; /* Centraliza verticalmente o conteúdo */
     height: 100vh;
     flex-direction: column;
+    background-image:url(ROTI.jpg);
 
 }
 
@@ -49,13 +50,14 @@
 .mascara {
     font-size: 150px;
     font-weight: bold;
-    background-image: url('TezB.gif');
+    /* background-image: url('TezB.gif'); */
     background-size: cover;
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
+    background-color: transparent;
 }
 .botao {
     display: inline-block;

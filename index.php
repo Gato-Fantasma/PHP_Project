@@ -11,7 +11,8 @@
     </nav>
     <!-- Seção inicial -->
     <div id="inicio">
-        <h1 class="mascara">RoTi</h1> <!-- Texto principal com efeito de máscara -->
+        <h1 class="mascara">.</h1>
+        <h1 class="mascara">.</h1>  <!-- Texto principal com efeito de máscara -->
         <p class="subtexto">"Não existe falta de tempo, existe falta de priorização"</p> <!-- Frase sem efeito -->
         <button onclick="location.href='Telalogin.html'">Vamos começar?</button> <!-- Botão que redireciona -->
     </div>
@@ -31,7 +32,8 @@
         </svg>
     </div>
     <div class="middle of the website">
-        
+        <div
+    
     </div>
 </body>
 </html>
