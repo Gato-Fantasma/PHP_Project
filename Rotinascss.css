@@ -146,3 +146,8 @@ body {
     text-align: center; /* Centraliza o texto */
 }
 
+.header-user-name {
+    font-size: 1.25rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    margin-left: 10px; /* Espaço entre o texto "Bem-vindo," e o nome */
+}

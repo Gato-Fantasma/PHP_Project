@@ -15,10 +15,10 @@
     <div class="container mt-4">
         <!-- Cabeçalho -->
         <header class="d-flex justify-content-between align-items-center p-3 bg-secondary text-white rounded">
-        <h1>Bem-vindo,</h1>
-        <?php 
-        echo isset($nome) ? htmlspecialchars($nome) : "Convidado"; 
-        ?>
+            <h1>Bem-vindo,</h>
+            <span class="ms-2 fs-4 fw-bold"><?php echo htmlspecialchars($nome); ?></span>
+        </header>
+
         </header>
 
         <div class="row mt-4">
