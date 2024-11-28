@@ -115,7 +115,7 @@ button:hover::before {
 .wave-section {
     position: relative;
     height: 300px;
-    background: linear-gradient(to bottom, #02deee, #ddda18);
+    background: linear-gradient(to bottom, #00f7ff, #00ffd5);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
 
@@ -128,7 +128,7 @@ button:hover::before {
 /* Div do degradê */
 .gradient-transition {
     height: 50px; /* Altura do degradê */
-    background: linear-gradient(to bottom, #e9c318, #d4b036); /* Degradê que suaviza as cores */
+    background: linear-gradient(to bottom, #18c7df, #08e2be); /* Degradê que suaviza as cores */
 }
 
 .social-media {
@@ -156,4 +156,55 @@ button:hover::before {
 
 .social-item span {
     font-size: 1.5rem; /* Aumenta o tamanho do texto */
+}
+
+.container-fluid {
+    background-color: #08e2be;
+}
+
+.navbar {
+    background-color: #08e2be;
+}
+
+/* Estilo da seção "Sobre o que é O Roti" */
+.about-section {
+    display: flex;
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto; /* Centraliza o container na página */
+}
+
+/* Estilo da imagem */
+.about-section img {
+    max-width: 300px; /* Define um tamanho máximo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas para estética */
+    object-fit: cover; /* Garante que a imagem se ajuste dentro do espaço */
+}
+
+/* Estilo do conteúdo textual */
+.text-content {
+    display: flex;
+    flex-direction: column; /* Organiza o span e h1 verticalmente */
+    justify-content: flex-start; /* Alinha o texto ao topo */
+    gap: 10px; /* Espaço entre o span e o h1 */
+    max-width: 600px; /* Define uma largura máxima para o texto */
+    text-align: left; /* Garante alinhamento à esquerda */
+}
+
+/* Estilo do span */
+.text-content span {
+    font-size: 1.2rem; /* Ajuste do tamanho da fonte */
+    font-weight: bold; /* Destaque visual para o span */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo do h1 */
+.text-content h1 {
+    font-size: 1.5rem; /* Ajuste do tamanho da fonte */
+    color: #555; /* Cor secundária para o h1 */
+    line-height: 1.5; /* Espaçamento entre linhas */
 }
