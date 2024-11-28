@@ -51,3 +51,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+$host = 'localhost'; // Host do banco de dados
+$dbname = 'Habitos DB'; // Nome do banco de dados
+$username = 'root'; // Seu usuário do MySQL
+$password = ''; // Sua senha do MySQL
+
+// Conectar ao banco de dados
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro de conexão: " . $e->getMessage());
+}
+
+// Função para adicionar um novo hábito
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['habit_name'])) {
+    $habit_name = $_POST['habit_name'];
+    $stmt = $pdo->prepare("INSERT INTO habits (habit_name) VALUES (:habit_name)");
+    $stmt->bindParam(':habit_name', $habit_name);
+    $stmt->execute();
+}
+
+// Função para marcar um hábito como cumprido
+if (isset($_POST['mark_habit_id'])) {
+    $habit_id = $_POST['mark_habit_id'];
+    $today = date('Y-m-d');
+
+    // Verifica se o hábito já foi marcado no mesmo dia
+    $stmt = $pdo->prepare("SELECT * FROM habits WHERE id = :id");
+    $stmt->bindParam(':id', $habit_id);
+    $stmt->execute();
+    $habit = $stmt->fetch();
+
+    if ($habit) {
+        if ($habit['last_completed'] !== $today) {
+            // Verifica se a última data completada é o dia anterior
+            $streak = ($habit['last_completed'] == date('Y-m-d', strtotime('-1 day'))) ? $habit['streak'] + 1 : 1;
+
+            // Atualiza o hábito com a nova sequência e a data de hoje
+            $updateStmt = $pdo->prepare("UPDATE habits SET streak = :streak, last_completed = :last_completed WHERE id = :id");
+            $updateStmt->bindParam(':streak', $streak);
+            $updateStmt->bindParam(':last_completed', $today);
+            $updateStmt->bindParam(':id', $habit_id);
+            $updateStmt->execute();
+        }
+    }
+}
+
+// Buscar todos os hábitos
+$stmt = $pdo->query("SELECT * FROM habits");
+$habits = $stmt->fetchAll();
+?>
