@@ -4,10 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rastramento de Rotina</title>
     <link rel="stylesheet" href="Csspagprinc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <!-- Adicione itens de navegação aqui -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Roti
+            </a>
+        </div>
     </nav>
     <!-- Seção inicial -->
     <div id="inicio">
@@ -31,8 +38,22 @@
             </defs>
         </svg>
     </div>
-    <div class="middle of the website">
-        <div
+    <div class="social-media">
+        <a href="https://www.instagram.com/seu_perfil" class="social-link">
+            <div class="social-item">
+                <i class="bi bi-instagram"></i>
+                <span>Instagram</span>
+            </div>
+        </a>
+        <a href="https://www.youtube.com/seu_canal" class="social-link">
+            <div class="social-item">
+                <i class="bi bi-youtube"></i>
+                <span>YouTube</span>
+            </div>
+        </a>
+    </div>
+
+
     
     </div>
 </body>
