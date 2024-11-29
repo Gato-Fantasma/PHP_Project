@@ -22,7 +22,7 @@
         <h1 class="mascara">.</h1>  <!-- Texto principal com efeito de máscara -->
         <p class="subtexto">"Não existe falta de tempo, existe falta de priorização"</p> <!-- Frase sem efeito -->
         <button onclick="location.href='Telacadastro.html'">Vamos começar?</button>
-        <button onclick="location.href='Telacadastro.html'">Vamos continuar?</button> <!-- Botão que redireciona -->
+        <button onclick="location.href='Telalogin.html'">Vamos continuar?</button> <!-- Botão que redireciona -->
     </div>
       <!-- Div de transição com degradê -->
       <div class="gradient-transition"></div>
@@ -58,8 +58,9 @@
 <div class="about-section">
     <img src="21686870-campo-natureza-panorama-desenho-animado-fundo-com-rio-pedra-verde-grama-arvore-colina-estrada-e-flores-vetor.jpg" alt="Natureza">
     <div class="text-content">
-        <span>Sobre o que é O Roti?</span>
-        <h1>Com dificuldade de controlar sua rotina e realizar aqueles sonhos que vivem na gaveta?</h1>
+
+        <h1>Sobre o que é O Roti?</h1>
+        <span>Com dificuldade de controlar sua rotina e realizar aqueles sonhos que vivem na gaveta? esse site foi feito para ajudalo nesse problema</span>
     </div>
 </div>
 
