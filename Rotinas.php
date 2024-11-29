@@ -6,7 +6,9 @@
     <title>Luiz Eduardo</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+</head>
     <?php
         include 'verificar_sessão.php';
     ?>
@@ -21,31 +23,153 @@
 
         </header>
 
-        <div class="row mt-4">
-            <!-- Seção lateral esquerda -->
-            <aside class="col-md-3 bg-light p-3 rounded">
-                <h2>Meus Hábitos</h2>
-            </aside>
+        <div class="container mt-5">
+    <!-- Título de Hábitos -->
+    <h2>Meus Hábitos</h2>
 
-            <!-- Área principal -->
-            <main class="col-md-6">
-                <section class="mb-4">
-                    <h3>Sequência</h3>
-                    <p>🔥 0 dias</p>
-                </section>
+    <!-- Botão para abrir o modal de adicionar hábito -->
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito">
+      Adicionar Hábito
+    </button>
 
-                <section>
-                    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalMeta">Adicionar Meta</button>
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito">Adicionar Hábito</button>
-                </section>
-            </main>
-
-            <!-- Seção lateral direita -->
-            <aside class="col-md-3 bg-light p-3 rounded">
-                <h3>Metas</h3>
-            </aside>
+    <!-- Modal para adicionar um novo hábito -->
+    <div class="modal fade" id="modalHabito" tabindex="-1" aria-labelledby="modalHabitoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHabitoLabel">Adicionar Hábito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formHabito">
+              <div class="mb-3">
+                <label for="nomeHabito" class="form-label">Nome do Hábito</label>
+                <input type="text" class="form-control" id="nomeHabito" required>
+              </div>
+              <div class="mb-3">
+                <label for="descricaoHabito" class="form-label">Descrição</label>
+                <textarea class="form-control" id="descricaoHabito" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Criar Hábito</button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
+
+    <!-- Lista de hábitos -->
+    <div id="listaHabitos" class="mt-4">
+      <!-- Os hábitos adicionados serão exibidos aqui -->
+    </div>
+
+    <!-- Título de Metas -->
+    <h2 class="mt-5">Minhas Metas</h2>
+
+    <!-- Botão para abrir o modal de adicionar meta -->
+    <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalMeta">
+      Adicionar Meta
+    </button>
+
+    <!-- Modal para adicionar uma nova meta -->
+    <div class="modal fade" id="modalMeta" tabindex="-1" aria-labelledby="modalMetaLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalMetaLabel">Adicionar Meta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formMeta">
+              <div class="mb-3">
+                <label for="tituloMeta" class="form-label">Título da Meta</label>
+                <input type="text" class="form-control" id="tituloMeta" required>
+              </div>
+              <div class="mb-3">
+                <label for="descricaoMeta" class="form-label">Descrição</label>
+                <textarea class="form-control" id="descricaoMeta" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Criar Meta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista de metas -->
+    <div id="listaMetas" class="mt-4">
+      <!-- As metas adicionadas serão exibidas aqui -->
+    </div>
+  </div>
+
+  <script>
+    // Função para adicionar um novo hábito à lista
+    document.getElementById("formHabito").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio do formulário
+
+      // Pegando os valores do formulário
+      const nomeHabito = document.getElementById("nomeHabito").value;
+      const descricaoHabito = document.getElementById("descricaoHabito").value;
+
+      if (nomeHabito && descricaoHabito) {
+        // Criando um novo item de hábito
+        const habitItem = document.createElement("div");
+        habitItem.classList.add("habit-item", "mb-3", "p-3", "border", "border-success", "rounded");
+
+        habitItem.innerHTML = `
+          <h5>${nomeHabito}</h5>
+          <p>${descricaoHabito}</p>
+        `;
+
+        // Adicionando o novo hábito à lista de hábitos
+        document.getElementById("listaHabitos").appendChild(habitItem);
+
+        // Limpando o formulário e fechando o modal
+        document.getElementById("formHabito").reset();
+        const modal = bootstrap.Modal.getInstance(document.getElementById("modalHabito"));
+        modal.hide();
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Campos obrigatórios',
+          text: 'Por favor, preencha o nome e a descrição do hábito!'
+        });
+      }
+    });
+
+    // Função para adicionar uma nova meta à lista
+    document.getElementById("formMeta").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio do formulário
+
+      // Pegando os valores do formulário
+      const tituloMeta = document.getElementById("tituloMeta").value;
+      const descricaoMeta = document.getElementById("descricaoMeta").value;
+
+      if (tituloMeta && descricaoMeta) {
+        // Criando um novo item de meta
+        const metaItem = document.createElement("div");
+        metaItem.classList.add("meta-item", "mb-3", "p-3", "border", "border-info", "rounded");
+
+        metaItem.innerHTML = `
+          <h5>${tituloMeta}</h5>
+          <p>${descricaoMeta}</p>
+        `;
+
+        // Adicionando a nova meta à lista de metas
+        document.getElementById("listaMetas").appendChild(metaItem);
+
+        // Limpando o formulário e fechando o modal
+        document.getElementById("formMeta").reset();
+        const modal = bootstrap.Modal.getInstance(document.getElementById("modalMeta"));
+        modal.hide();
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Campos obrigatórios',
+          text: 'Por favor, preencha o título e a descrição da meta!'
+        });
+      }
+    });
+  </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
