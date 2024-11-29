@@ -18,7 +18,7 @@
         <!-- Cabeçalho -->
         <header class="d-flex justify-content-between align-items-center p-3 bg-secondary text-white rounded">
             <h1>Bem-vindo,</h>
-            <span class="ms-2 fs-4 fw-bold"><?php echo htmlspecialchars($nome); ?></span>
+            <span class="ms-2 fs-4 fw-bold"><?php echo htmlspecialchars($nomeUsuario); ?></span>
         </header>
 
         </header>
