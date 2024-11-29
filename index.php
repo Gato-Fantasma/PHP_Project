@@ -21,7 +21,8 @@
         <h1 class="mascara">.</h1>
         <h1 class="mascara">.</h1>  <!-- Texto principal com efeito de máscara -->
         <p class="subtexto">"Não existe falta de tempo, existe falta de priorização"</p> <!-- Frase sem efeito -->
-        <button onclick="location.href='Telalogin.html'">Vamos começar?</button> <!-- Botão que redireciona -->
+        <button onclick="location.href='Telacadastro.html'">Vamos começar?</button>
+        <button onclick="location.href='Telacadastro.html'">Vamos continuar?</button> <!-- Botão que redireciona -->
     </div>
       <!-- Div de transição com degradê -->
       <div class="gradient-transition"></div>

@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="CssLogin.css">
 </head>
 <body>
     <div class="login">
         <form action="loginroti.php" method="POST">
-            <input type="hidden" name="action" value="login"> <!-- Define que é login -->
-            <h1>Login</h1>
+            <input type="hidden" name="action" value="cadastro"> <!-- Define que é cadastro -->
+            <h1>Cadastro</h1>
+            <label>Nome</label>
+            <input type="text" name="nome" required>
+
             <label>Email</label>
             <input type="email" name="email" required>
 
             <label>Senha</label>
             <input type="password" name="senha" required>
 
-            <button type="submit">Entrar</button>
+            <button type="submit">Cadastrar</button>
         </form>
     </div>
 </body>
